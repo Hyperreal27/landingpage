@@ -25,20 +25,20 @@ const mainServices = [
       'Personalización a escala',
       'Integración con CRM existente'
     ],
-    roi: '400%',
+    roi: 'Premium',
     color: 'from-gold-400 to-gold-600'
   },
   {
     icon: ChatBubbleLeftRightIcon,
-    title: 'Customer Support IA',
-    description: 'Asistentes conversacionales que resuelven el 80% de consultas instantáneamente',
+    title: 'AI Systems',
+    description: 'Infraestructura completa de IA con dashboards personalizados y experiencias premium',
     benefits: [
-      'Respuesta instantánea 24/7',
-      '90% de resolución automática',
-      'Escalamiento inteligente',
-      'Análisis de sentimientos'
+      'Dashboards en tiempo real',
+      'Interfaces personalizadas',
+      'Métricas y analytics avanzados',
+      'Experiencia white-glove'
     ],
-    roi: '300%',
+    roi: 'Premium',
     color: 'from-gold-500 to-gold-700'
   },
   {
@@ -51,7 +51,7 @@ const mainServices = [
       'Reducción 80% tiempo manual',
       'Monitoreo y alertas inteligentes'
     ],
-    roi: '250%',
+    roi: 'Premium',
     color: 'from-gold-600 to-gold-800'
   }
 ];
@@ -66,12 +66,12 @@ const additionalBenefits = [
   {
     icon: ClockIcon,
     title: 'Implementación Rápida',
-    description: 'Sistema funcionando en 7 días o menos, sin interrumpir operaciones',
+    description: 'Sistema funcionando en 14 días o menos, sin interrumpir operaciones',
   },
   {
     icon: CurrencyDollarIcon,
     title: 'Inversión Recuperable',
-    description: 'La mayoría de clientes recuperan su inversión en menos de 60 días',
+    description: 'Inversión inteligente que se paga a sí misma con automatización escalable',
   },
   {
     icon: ChartBarIcon,
@@ -188,28 +188,28 @@ export function Benefits() {
             ))}
           </motion.div>
 
-          {/* Stats section */}
+          {/* Value proposition section */}
           <motion.div variants={itemVariants} className="text-center">
             <div className="bg-dark-800/50 border border-gold-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-display font-bold text-white mb-8">
-                Resultados que <span className="text-gold-gradient">Hablan por Sí Solos</span>
+                <span className="text-gold-gradient">Tecnología</span> que Marca la Diferencia
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-gold-400">500+</div>
-                  <div className="text-sm text-gray-300">Empresas Transformadas</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold text-gold-400">$50M+</div>
-                  <div className="text-sm text-gray-300">ROI Generado</div>
+                  <div className="text-3xl font-bold text-gold-400">AI</div>
+                  <div className="text-sm text-gray-300">Infrastructure</div>
                 </div>
                 <div className="space-y-2">
                   <div className="text-3xl font-bold text-gold-400">24/7</div>
                   <div className="text-sm text-gray-300">Automatización</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-gold-400">99%</div>
-                  <div className="text-sm text-gray-300">Satisfacción Cliente</div>
+                  <div className="text-3xl font-bold text-gold-400">Custom</div>
+                  <div className="text-sm text-gray-300">Dashboards</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-gold-400">White</div>
+                  <div className="text-sm text-gray-300">Glove Service</div>
                 </div>
               </div>
             </div>
@@ -251,8 +251,8 @@ export function Benefits() {
                 ¿Listo para <span className="text-gold-gradient">Multiplicar</span> tus Resultados?
               </h3>
               <p className="text-lg text-gray-300">
-                Únete a las 500+ empresas que ya están automatizando sus procesos más críticos 
-                y generando resultados 24/7 con nuestros sistemas de IA
+                Descubre cómo los AI Systems pueden transformar tu negocio con infraestructura 
+                de vanguardia y dashboards personalizados
               </p>
               <motion.button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -260,7 +260,7 @@ export function Benefits() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Programa tu Consulta Estratégica Gratis
+                Programa tu Consulta Estratégica
                 <BoltIcon className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform inline" />
               </motion.button>
             </div>

@@ -16,8 +16,8 @@ export default function Home() {
       <CustomCursor />
       <FloatingParticles count={15} />
       
-      {/* AI Chatbot Assistant */}
-      <ChatBot />
+      {/* AI Chatbot Assistant - Temporarily Hidden */}
+      {/* <ChatBot /> */}
       
       {/* Header with navigation */}
       <Header />

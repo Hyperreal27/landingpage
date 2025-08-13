@@ -107,7 +107,7 @@ export function Hero() {
             <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Automatizamos tus procesos más críticos con{' '}
               <span className="text-gold-400 font-semibold">Lead Generation Agents</span>,{' '}
-              <span className="text-gold-400 font-semibold">Customer Support IA</span> y{' '}
+              <span className="text-gold-400 font-semibold">AI Systems</span> y{' '}
               <span className="text-gold-400 font-semibold">N8N Workflows</span>{' '}
               que generan resultados 24/7
             </p>
@@ -118,7 +118,7 @@ export function Hero() {
             <div className="flex flex-wrap justify-center gap-8 text-sm sm:text-base">
               <div className="flex items-center text-gray-300">
                 <div className="w-2 h-2 bg-gold-500 rounded-full mr-3" />
-                +300% ROI Promedio
+                ROI Escalable
               </div>
               <div className="flex items-center text-gray-300">
                 <div className="w-2 h-2 bg-gold-500 rounded-full mr-3" />
@@ -126,7 +126,7 @@ export function Hero() {
               </div>
               <div className="flex items-center text-gray-300">
                 <div className="w-2 h-2 bg-gold-500 rounded-full mr-3" />
-                Implementación en 7 días
+                Implementación en 14 días
               </div>
             </div>
           </motion.div>
@@ -139,7 +139,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Consulta Estratégica Gratis
+              Consulta Estratégica
               <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform inline" />
             </motion.button>
             
@@ -156,14 +156,14 @@ export function Hero() {
           {/* Trust indicators */}
           <motion.div variants={itemVariants} className="pt-8">
             <p className="text-gray-400 text-sm mb-4">
-              Confiado por empresas que buscan crecimiento exponencial
+              Tecnología de vanguardia para empresas ambiciosas
             </p>
             <div className="flex justify-center items-center gap-8 opacity-60">
-              <div className="text-gold-400 font-semibold">500+ Empresas</div>
+              <div className="text-gold-400 font-semibold">AI Infrastructure</div>
               <div className="w-1 h-1 bg-gold-500 rounded-full" />
-              <div className="text-gold-400 font-semibold">99% Satisfacción</div>
+              <div className="text-gold-400 font-semibold">Dashboards Personalizados</div>
               <div className="w-1 h-1 bg-gold-500 rounded-full" />
-              <div className="text-gold-400 font-semibold">24/7 Soporte</div>
+              <div className="text-gold-400 font-semibold">Soporte Premium</div>
             </div>
           </motion.div>
         </motion.div>

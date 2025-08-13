@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "n8n-mcp": {
+      "command": "npx",
+      "args": ["n8n-mcp"],
+      "timeout": 60000,
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true",
+        "N8N_API_URL": "https://zzn8n.danielcarreon.site/",
+        "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OTE5ODc5Yy1hZmJiLTQxNjYtOTVkOC1lYmM2NGVkNzQzYzgiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzU0OTIyMzEyfQ.WbEYbgDqi5NXtKmi6CnSTiSH_pbjVXzeOzowQDxdP28"
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@ interface FormData {
   phone: string;
   company: string;
   revenue: string;
-  service: string;
+  website: string;
   message: string;
 }
 
@@ -18,18 +18,12 @@ interface FormErrors {
   [key: string]: string;
 }
 
-const serviceOptions = [
-  { value: 'lead-generation', label: 'Lead Generation Agents (+400% ROI)' },
-  { value: 'customer-support', label: 'Customer Support IA (+300% ROI)' },
-  { value: 'n8n-automation', label: 'N8N Automations (+250% ROI)' },
-  { value: 'custom-solution', label: 'Solución Personalizada' },
-];
 
-const revenueOptions = [
-  { value: '0-100k', label: '$0 - $100K USD/año' },
-  { value: '100k-500k', label: '$100K - $500K USD/año' },
-  { value: '500k-1m', label: '$500K - $1M USD/año' },
-  { value: '1m+', label: '$1M+ USD/año' },
+const budgetOptions = [
+  { value: 'Básico (500 - 1.500 USD)', label: 'Básico (500 - 1.500 USD)' },
+  { value: 'Estándar (1.500 - 3.000 USD)', label: 'Estándar (1.500 - 3.000 USD)' },
+  { value: 'Premium (3.000 - 5.000 USD)', label: 'Premium (3.000 - 5.000 USD)' },
+  { value: 'Empresarial (5.000+ USD)', label: 'Empresarial (5.000+ USD)' },
 ];
 
 export function ContactForm() {
@@ -39,7 +33,7 @@ export function ContactForm() {
     phone: '',
     company: '',
     revenue: '',
-    service: '',
+    website: '',
     message: '',
   });
 
@@ -70,11 +64,7 @@ export function ContactForm() {
     }
 
     if (!formData.revenue) {
-      newErrors.revenue = 'Selecciona los ingresos anuales';
-    }
-
-    if (!formData.service) {
-      newErrors.service = 'Selecciona un servicio';
+      newErrors.revenue = 'Selecciona el presupuesto';
     }
 
     setErrors(newErrors);
@@ -102,19 +92,19 @@ export function ContactForm() {
 
     try {
       // Send data to N8n webhook
-      const response = await fetch('https://zzn8n.danielcarreon.site/webhook-test/test', {
+      const response = await fetch('https://zzn8n.danielcarreon.site/webhook-test/form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          // Form data with clear field mapping
+          // Form data matching N8N expectations
           name: formData.name,
           email: formData.email,
-          phone: formData.phone,
+          phoneNumber: formData.phone,
           company: formData.company,
-          revenue: formData.revenue,
-          service: formData.service,
+          budget: formData.revenue,
+          website: formData.website,
           message: formData.message,
           // Additional metadata for better tracking
           timestamp: new Date().toISOString(),
@@ -137,7 +127,7 @@ export function ContactForm() {
             phone: '',
             company: '',
             revenue: '',
-            service: '',
+            website: '',
             message: '',
           });
         }, 3000);
@@ -159,7 +149,7 @@ export function ContactForm() {
           phone: '',
           company: '',
           revenue: '',
-          service: '',
+          website: '',
           message: '',
         });
       }, 3000);
@@ -314,7 +304,7 @@ export function ContactForm() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="revenue" className="block text-sm font-medium text-gray-300 mb-2">
-                  Ingresos Anuales *
+                  Presupuesto de Inversión *
                 </label>
                 <select
                   id="revenue"
@@ -325,8 +315,8 @@ export function ContactForm() {
                     errors.revenue ? 'border-red-500' : 'border-gray-600'
                   } rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors`}
                 >
-                  <option value="">Selecciona un rango</option>
-                  {revenueOptions.map(option => (
+                  <option value="">Elige tu rango de inversión</option>
+                  {budgetOptions.map(option => (
                     <option key={option.value} value={option.value} className="bg-dark-800">
                       {option.label}
                     </option>
@@ -345,35 +335,18 @@ export function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                  Servicio de Interés *
+                <label htmlFor="website" className="block text-sm font-medium text-gray-300 mb-2">
+                  Sitio Web o Red Social
                 </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
+                <input
+                  type="url"
+                  id="website"
+                  name="website"
+                  value={formData.website}
                   onChange={handleChange}
-                  className={`w-full bg-dark-800/50 border ${
-                    errors.service ? 'border-red-500' : 'border-gray-600'
-                  } rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors`}
-                >
-                  <option value="">Selecciona un servicio</option>
-                  {serviceOptions.map(option => (
-                    <option key={option.value} value={option.value} className="bg-dark-800">
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-                {errors.service && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-red-500 text-sm mt-1 flex items-center gap-1"
-                  >
-                    <ExclamationCircleIcon className="w-4 h-4" />
-                    {errors.service}
-                  </motion.p>
-                )}
+                  className="w-full bg-dark-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-gold-500 transition-colors"
+                  placeholder="https://tuempresa.com o @usuario"
+                />
               </div>
             </div>
 

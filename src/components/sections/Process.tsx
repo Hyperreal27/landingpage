@@ -16,7 +16,7 @@ const processSteps = [
     icon: CogIcon,
     title: 'Diseño e Implementación',
     description: 'Desarrollamos y configuramos tus agentes IA y workflows personalizados.',
-    duration: '5-7 días',
+    duration: '10-14 días',
   },
   {
     icon: RocketLaunchIcon,
@@ -78,9 +78,9 @@ export function Process() {
               Cómo <span className="text-gold-gradient">Transformamos</span> tu Negocio
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Un proceso sistemático y probado que ha generado más de{' '}
-              <span className="text-gold-400 font-semibold">$50M en ROI</span>{' '}
-              para nuestros clientes
+              Un proceso sistemático y probado para implementar{' '}
+              <span className="text-gold-400 font-semibold">AI Infrastructure</span>{' '}
+              de clase empresarial
             </p>
           </motion.div>
 
@@ -180,8 +180,8 @@ export function Process() {
                 ¿Listo para <span className="text-gold-gradient">Automatizar</span> tu Negocio?
               </h3>
               <p className="text-gray-300 mb-6">
-                Programa una consulta estratégica gratuita y descubre cómo podemos 
-                generar resultados medibles en tu empresa
+                Programa una consulta estratégica y descubre cómo podemos 
+                transformar tu negocio con AI Systems personalizados
               </p>
               <motion.button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -189,7 +189,7 @@ export function Process() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Programa tu Consulta Gratis
+                Programa tu Consulta Estratégica
               </motion.button>
             </div>
           </motion.div>

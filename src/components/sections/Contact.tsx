@@ -28,11 +28,11 @@ export function Contact() {
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Automatiza tu Negocio en{' '}
-            <span className="text-gold-gradient">7 Días</span>
+            <span className="text-gold-gradient">14 Días</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            Completa el formulario y obtén una consulta estratégica gratuita para transformar 
-            tu empresa con inteligencia artificial. Sin compromiso, solo resultados.
+            Completa el formulario y obtén una consulta estratégica para transformar 
+            tu empresa con AI Systems de vanguardia. Evaluación personalizada.
           </p>
         </motion.div>
 
@@ -77,27 +77,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
-                    <p className="text-white">contacto@aiagency.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gold-gradient rounded-lg flex items-center justify-center">
-                    <PhoneIcon className="w-5 h-5 text-dark-950" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">WhatsApp</p>
-                    <p className="text-white">+52 55 1234 5678</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gold-gradient rounded-lg flex items-center justify-center">
-                    <ClockIcon className="w-5 h-5 text-dark-950" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Horario</p>
-                    <p className="text-white">Lun-Vie 9:00-18:00 (GMT-6)</p>
+                    <p className="text-white">danielcarreong00@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -120,7 +100,7 @@ export function Contact() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-gold-500 rounded-full" />
-                  <span className="text-gray-300">Consulta 100% gratuita</span>
+                  <span className="text-gray-300">Consulta estratégica personalizada</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-gold-500 rounded-full" />
@@ -128,7 +108,7 @@ export function Contact() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-gold-500 rounded-full" />
-                  <span className="text-gray-300">ROI garantizado o reembolso</span>
+                  <span className="text-gray-300">AI Systems de clase empresarial</span>
                 </div>
               </div>
             </motion.div>
@@ -142,16 +122,16 @@ export function Contact() {
             >
               <div className="space-y-4">
                 <div>
-                  <div className="text-3xl font-bold text-gold-500">500+</div>
-                  <div className="text-gray-400 text-sm">Empresas transformadas</div>
+                  <div className="text-3xl font-bold text-gold-500">AI</div>
+                  <div className="text-gray-400 text-sm">Infrastructure</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-gold-500">$50M+</div>
-                  <div className="text-gray-400 text-sm">ROI generado</div>
+                  <div className="text-3xl font-bold text-gold-500">Custom</div>
+                  <div className="text-gray-400 text-sm">Dashboards</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-gold-500">99%</div>
-                  <div className="text-gray-400 text-sm">Satisfacción</div>
+                  <div className="text-3xl font-bold text-gold-500">Premium</div>
+                  <div className="text-gray-400 text-sm">Experience</div>
                 </div>
               </div>
             </motion.div>
