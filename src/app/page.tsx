@@ -6,7 +6,6 @@ import { Contact } from '@/components/sections/Contact';
 import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
 import { CustomCursor } from '@/components/ui/CustomCursor';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
-import { ChatBot } from '@/components/ui/ChatBot';
 
 export default function Home() {
   return (
