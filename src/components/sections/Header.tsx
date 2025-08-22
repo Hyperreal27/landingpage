@@ -54,9 +54,12 @@ export function Header() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex-shrink-0"
           >
-            <h1 className="text-2xl font-display font-bold text-gold-gradient">
-              AI<span className="text-white">Agency</span>
-            </h1>
+            <div className="flex items-center space-x-3">
+              <img src="/aiflux.png" alt="AiFlux Logo" className="w-8 h-8" />
+              <h1 className="text-2xl font-display font-bold text-gold-gradient">
+                Ai<span className="text-white">Flux</span>
+              </h1>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}

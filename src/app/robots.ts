@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://aiagency.com/sitemap.xml',
+    sitemap: 'https://aiflux.space/sitemap.xml',
   }
 } 

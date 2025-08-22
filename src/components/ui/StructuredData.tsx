@@ -2,10 +2,10 @@ export function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "AI Agency",
+    "name": "AiFlux",
     "description": "Automatización IA que transforma negocios con Lead Generation Agents, Customer Support IA y N8N Workflows",
-    "url": "https://aiagency.com",
-    "logo": "https://aiagency.com/logo.png",
+    "url": "https://aiflux.space",
+    "logo": "https://aiflux.space/aiflux.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+52-55-1234-5678",
@@ -13,8 +13,8 @@ export function StructuredData() {
       "availableLanguage": ["Spanish", "English"]
     },
     "sameAs": [
-      "https://linkedin.com/company/aiagency",
-      "https://twitter.com/aiagency"
+      "https://linkedin.com/company/aiflux",
+      "https://twitter.com/aiflux"
     ],
     "service": [
       {
@@ -38,11 +38,11 @@ export function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "AI Agency",
-    "url": "https://aiagency.com",
+    "name": "AiFlux",
+    "url": "https://aiflux.space",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://aiagency.com/search?q={search_term_string}",
+      "target": "https://aiflux.space/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };

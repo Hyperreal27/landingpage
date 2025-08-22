@@ -1,4 +1,4 @@
-# 🚀 AI Agency - Landing Page Premium
+# 🚀 AiFlux - Landing Page Premium
 
 Una landing page de automatización IA de nivel Silicon Valley, diseñada para maximizar conversiones y transmitir profesionalismo absoluto.
 

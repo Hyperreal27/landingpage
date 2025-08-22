@@ -3,7 +3,7 @@ import "./globals.css";
 import { StructuredData } from "@/components/ui/StructuredData";
 
 export const metadata: Metadata = {
-  title: "AI Agency - Automatización IA que Transforma Negocios",
+  title: "AiFlux - Automatización IA que Transforma Negocios",
   description: "Automatizamos tus procesos más críticos con Lead Generation Agents, Customer Support IA y N8N Workflows. +300% ROI garantizado en 30 días. Consulta gratuita.",
   keywords: [
     "automatización IA",
@@ -15,29 +15,29 @@ export const metadata: Metadata = {
     "agentes IA",
     "transformación digital"
   ],
-  authors: [{ name: "AI Agency" }],
-  creator: "AI Agency",
-  publisher: "AI Agency",
+  authors: [{ name: "AiFlux" }],
+  creator: "AiFlux",
+  publisher: "AiFlux",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://aiagency.com'),
+  metadataBase: new URL('https://aiflux.space'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "AI Agency - Automatización IA que Transforma Negocios",
+    title: "AiFlux - Automatización IA que Transforma Negocios",
     description: "Automatizamos tus procesos más críticos con Lead Generation Agents, Customer Support IA y N8N Workflows. +300% ROI garantizado en 30 días.",
-    url: 'https://aiagency.com',
-    siteName: 'AI Agency',
+    url: 'https://aiflux.space',
+    siteName: 'AiFlux',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'AI Agency - Automatización IA',
+        alt: 'AiFlux - Automatización IA',
       },
     ],
     locale: 'es_ES',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "AI Agency - Automatización IA que Transforma Negocios",
+    title: "AiFlux - Automatización IA que Transforma Negocios",
     description: "Automatizamos tus procesos más críticos con IA. +300% ROI garantizado en 30 días.",
     images: ['/og-image.jpg'],
   },
@@ -76,6 +76,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <link rel="icon" href="/aiflux.png" type="image/png" />
+        <link rel="shortcut icon" href="/aiflux.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/aiflux.png" />
         <StructuredData />
       </head>
       <body className="antialiased">
