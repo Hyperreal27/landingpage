@@ -29,7 +29,7 @@ export function FloatingParticles({ count = 20 }: { count?: number }) {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute bg-gold-500/10 rounded-full"
+          className="absolute bg-[#F57F11]/10 rounded-full"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,

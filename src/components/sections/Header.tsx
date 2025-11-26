@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 import { cn, scrollToElement } from '@/lib/utils';
 
 // Navigation items for internal sections
@@ -41,7 +42,7 @@ export function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-dark-950/95 backdrop-blur-lg border-b border-gold-500/20'
+          ? 'bg-black/95 backdrop-blur-lg border-b border-[#F57F11]/20'
           : 'bg-transparent'
       )}
     >
@@ -54,12 +55,14 @@ export function Header() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex-shrink-0"
           >
-            <div className="flex items-center space-x-3">
-              <img src="/aiflux.png" alt="AiFlux Logo" className="w-8 h-8" />
-              <h1 className="text-2xl font-display font-bold text-gold-gradient">
-                Ai<span className="text-white">Flux</span>
-              </h1>
-            </div>
+            <Image 
+              src="/intellia-logo.png" 
+              alt="Intellia" 
+              width={140} 
+              height={38}
+              className="h-auto"
+              priority
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -76,7 +79,7 @@ export function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 onClick={() => handleNavClick(item.href)}
-                className="text-gray-300 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors duration-200 animated-underline"
+                className="text-gray-300 hover:text-[#F57F11] px-3 py-2 text-sm font-medium transition-colors duration-200 animated-underline"
               >
                 {item.name}
               </motion.button>
@@ -94,7 +97,7 @@ export function Header() {
               onClick={() => handleNavClick('contact')}
               className="btn-primary text-sm"
             >
-              Consulta Gratis
+              Empieza hoy
             </button>
           </motion.div>
 
@@ -103,7 +106,7 @@ export function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="md:hidden p-2 rounded-md text-gray-400 hover:text-gold-400 hover:bg-dark-800 transition-colors duration-200"
+            className="md:hidden p-2 rounded-md text-gray-400 hover:text-[#F57F11] hover:bg-dark-800 transition-colors duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <span className="sr-only">Abrir menú principal</span>
@@ -124,7 +127,7 @@ export function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden bg-dark-950/98 backdrop-blur-lg border-b border-gold-500/20"
+            className="md:hidden bg-black/98 backdrop-blur-lg border-b border-[#F57F11]/20"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item, index) => (
@@ -134,7 +137,7 @@ export function Header() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-gray-300 hover:text-gold-400 hover:bg-dark-800 block px-3 py-2 text-base font-medium w-full text-left rounded-md transition-colors duration-200"
+                  className="text-gray-300 hover:text-[#F57F11] hover:bg-dark-800 block px-3 py-2 text-base font-medium w-full text-left rounded-md transition-colors duration-200"
                 >
                   {item.name}
                 </motion.button>
@@ -146,7 +149,7 @@ export function Header() {
                 onClick={() => handleNavClick('contact')}
                 className="btn-primary w-full mt-4 text-sm"
               >
-                Consulta Gratis
+                Empieza hoy
               </motion.button>
             </div>
           </motion.div>

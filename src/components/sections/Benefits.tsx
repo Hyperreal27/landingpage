@@ -26,7 +26,7 @@ const mainServices = [
       'Integración con CRM existente'
     ],
     roi: 'Premium',
-    color: 'from-gold-400 to-gold-600'
+    color: 'from-[#F57F11] to-[#d66a0e]'
   },
   {
     icon: ChatBubbleLeftRightIcon,
@@ -39,7 +39,7 @@ const mainServices = [
       'Experiencia white-glove'
     ],
     roi: 'Premium',
-    color: 'from-gold-500 to-gold-700'
+    color: 'from-[#F57F11] to-[#b85a0c]'
   },
   {
     icon: Cog8ToothIcon,
@@ -52,7 +52,7 @@ const mainServices = [
       'Monitoreo y alertas inteligentes'
     ],
     roi: 'Premium',
-    color: 'from-gold-600 to-gold-800'
+    color: 'from-[#F57F11] to-[#9a4a0a]'
   }
 ];
 
@@ -112,7 +112,7 @@ export function Benefits() {
   return (
     <section
       id="benefits"
-      className="py-24 bg-gradient-to-b from-dark-900 to-dark-950"
+      className="py-24 bg-black"
       ref={ref}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,7 +124,7 @@ export function Benefits() {
         >
           {/* Section header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-sm font-medium">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#F57F11]/10 border border-[#F57F11]/20 text-[#F57F11] text-sm font-medium">
               <BoltIcon className="w-4 h-4 mr-2" />
               Beneficios Comprobados
             </div>
@@ -133,7 +133,7 @@ export function Benefits() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Nos enfocamos en las 3 automatizaciones que generan el{' '}
-              <span className="text-gold-400 font-semibold">80% de los resultados</span>{' '}
+              <span className="text-[#F57F11] font-semibold">80% de los resultados</span>{' '}
               en menos tiempo y con mayor ROI garantizado
             </p>
           </motion.div>
@@ -163,7 +163,7 @@ export function Benefits() {
 
                   {/* Content */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-display font-bold text-white group-hover:text-gold-400 transition-colors">
+                    <h3 className="text-xl font-display font-bold text-white group-hover:text-[#F57F11] transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-gray-300 leading-relaxed">
@@ -175,14 +175,14 @@ export function Benefits() {
                   <div className="space-y-3">
                     {service.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-start space-x-3">
-                        <div className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2 flex-shrink-0" />
+                        <div className="w-1.5 h-1.5 bg-[#F57F11] rounded-full mt-2 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{benefit}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Hover effect gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-gold-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#F57F11]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
               </motion.div>
             ))}
@@ -190,25 +190,25 @@ export function Benefits() {
 
           {/* Value proposition section */}
           <motion.div variants={itemVariants} className="text-center">
-            <div className="bg-dark-800/50 border border-gold-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
+            <div className="bg-black/90 border border-[#F57F11]/20 rounded-2xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-display font-bold text-white mb-8">
                 <span className="text-gold-gradient">Tecnología</span> que Marca la Diferencia
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-gold-400">AI</div>
+                  <div className="text-3xl font-bold text-[#F57F11]">AI</div>
                   <div className="text-sm text-gray-300">Infrastructure</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-gold-400">24/7</div>
+                  <div className="text-3xl font-bold text-[#F57F11]">24/7</div>
                   <div className="text-sm text-gray-300">Automatización</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-gold-400">Custom</div>
+                  <div className="text-3xl font-bold text-[#F57F11]">Custom</div>
                   <div className="text-sm text-gray-300">Dashboards</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-gold-400">White</div>
+                  <div className="text-3xl font-bold text-[#F57F11]">White</div>
                   <div className="text-sm text-gray-300">Glove Service</div>
                 </div>
               </div>
@@ -228,10 +228,10 @@ export function Benefits() {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="text-center space-y-4 p-6 rounded-xl bg-dark-800/30 border border-gold-500/10 hover:border-gold-500/30 transition-colors"
+                  className="text-center space-y-4 p-6 rounded-xl bg-black/90 border border-[#F57F11]/10 hover:border-[#F57F11]/30 transition-colors"
                 >
-                  <div className="w-12 h-12 bg-gold-500/10 rounded-xl flex items-center justify-center mx-auto">
-                    <benefit.icon className="w-6 h-6 text-gold-400" />
+                  <div className="w-12 h-12 bg-[#F57F11]/10 rounded-xl flex items-center justify-center mx-auto">
+                    <benefit.icon className="w-6 h-6 text-[#F57F11]" />
                   </div>
                   <h4 className="text-lg font-semibold text-white">
                     {benefit.title}
@@ -260,7 +260,7 @@ export function Benefits() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Programa tu Consulta Estratégica
+                Empieza hoy
                 <BoltIcon className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform inline" />
               </motion.button>
             </div>

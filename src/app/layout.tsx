@@ -3,7 +3,7 @@ import "./globals.css";
 import { StructuredData } from "@/components/ui/StructuredData";
 
 export const metadata: Metadata = {
-  title: "AiFlux - Automatización IA que Transforma Negocios",
+  title: "Intellia - Automatización IA que Transforma Negocios",
   description: "Automatizamos tus procesos más críticos con Lead Generation Agents, Customer Support IA y N8N Workflows. +300% ROI garantizado en 30 días. Consulta gratuita.",
   keywords: [
     "automatización IA",
@@ -15,29 +15,34 @@ export const metadata: Metadata = {
     "agentes IA",
     "transformación digital"
   ],
-  authors: [{ name: "AiFlux" }],
-  creator: "AiFlux",
-  publisher: "AiFlux",
+  authors: [{ name: "Intellia" }],
+  creator: "Intellia",
+  publisher: "Intellia",
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://aiflux.space'),
+  metadataBase: new URL('https://intellia.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "AiFlux - Automatización IA que Transforma Negocios",
+    title: "Intellia - Automatización IA que Transforma Negocios",
     description: "Automatizamos tus procesos más críticos con Lead Generation Agents, Customer Support IA y N8N Workflows. +300% ROI garantizado en 30 días.",
-    url: 'https://aiflux.space',
-    siteName: 'AiFlux',
+    url: 'https://intellia.com',
+    siteName: 'Intellia',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'AiFlux - Automatización IA',
+        alt: 'Intellia - Automatización IA',
       },
     ],
     locale: 'es_ES',
@@ -45,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "AiFlux - Automatización IA que Transforma Negocios",
+    title: "Intellia - Automatización IA que Transforma Negocios",
     description: "Automatizamos tus procesos más críticos con IA. +300% ROI garantizado en 30 días.",
     images: ['/og-image.jpg'],
   },
@@ -76,9 +81,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/aiflux.png" type="image/png" />
-        <link rel="shortcut icon" href="/aiflux.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/aiflux.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <StructuredData />
       </head>
       <body className="antialiased">

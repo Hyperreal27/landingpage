@@ -12,11 +12,11 @@ export function Contact() {
   });
 
   return (
-    <section id="contact" className="py-24 bg-dark-950 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-black relative overflow-hidden">
       {/* Background gradient effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950" />
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-black" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#F57F11]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F57F11]/5 rounded-full blur-3xl" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
@@ -77,7 +77,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
-                    <p className="text-white">danielcarreong00@gmail.com</p>
+                    <p className="text-white">intellia@intellia.mx</p>
                   </div>
                 </div>
               </div>
@@ -95,19 +95,19 @@ export function Contact() {
               </h4>
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-gold-500 rounded-full" />
+                  <div className="w-2 h-2 bg-[#F57F11] rounded-full" />
                   <span className="text-gray-300">Respuesta en 24hrs garantizada</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-gold-500 rounded-full" />
+                  <div className="w-2 h-2 bg-[#F57F11] rounded-full" />
                   <span className="text-gray-300">Consulta estratégica personalizada</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-gold-500 rounded-full" />
+                  <div className="w-2 h-2 bg-[#F57F11] rounded-full" />
                   <span className="text-gray-300">Sin compromiso de compra</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-gold-500 rounded-full" />
+                  <div className="w-2 h-2 bg-[#F57F11] rounded-full" />
                   <span className="text-gray-300">AI Systems de clase empresarial</span>
                 </div>
               </div>
@@ -122,15 +122,15 @@ export function Contact() {
             >
               <div className="space-y-4">
                 <div>
-                  <div className="text-3xl font-bold text-gold-500">AI</div>
+                  <div className="text-3xl font-bold text-[#F57F11]">AI</div>
                   <div className="text-gray-400 text-sm">Infrastructure</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-gold-500">Custom</div>
+                  <div className="text-3xl font-bold text-[#F57F11]">Custom</div>
                   <div className="text-gray-400 text-sm">Dashboards</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-gold-500">Premium</div>
+                  <div className="text-3xl font-bold text-[#F57F11]">Premium</div>
                   <div className="text-gray-400 text-sm">Experience</div>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRightIcon, SparklesIcon, BoltIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { scrollToElement } from '@/lib/utils';
 
 // Animation variants for staggered animations
@@ -28,16 +28,6 @@ const itemVariants = {
   },
 };
 
-const floatingIconVariants = {
-  animate: {
-    y: [-10, 10, -10],
-    transition: {
-      duration: 6,
-      repeat: Infinity,
-      ease: 'easeInOut',
-    },
-  },
-};
 
 export function Hero() {
   const handleCTAClick = () => {
@@ -51,34 +41,9 @@ export function Hero() {
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Floating icons */}
-        <motion.div
-          variants={floatingIconVariants}
-          animate="animate"
-          className="absolute top-20 left-10 text-gold-400/20"
-        >
-          <SparklesIcon className="w-8 h-8" />
-        </motion.div>
-        <motion.div
-          variants={floatingIconVariants}
-          animate="animate"
-          className="absolute top-40 right-20 text-gold-400/30"
-          style={{ animationDelay: '2s' }}
-        >
-          <BoltIcon className="w-10 h-10" />
-        </motion.div>
-        <motion.div
-          variants={floatingIconVariants}
-          animate="animate"
-          className="absolute bottom-40 left-20 text-gold-400/25"
-          style={{ animationDelay: '4s' }}
-        >
-          <ChartBarIcon className="w-12 h-12" />
-        </motion.div>
-
         {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold-600/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#F57F11]/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#F57F11]/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '3s' }} />
       </div>
 
       {/* Main content */}
@@ -91,25 +56,19 @@ export function Hero() {
         >
           {/* Badge */}
           <motion.div variants={itemVariants}>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-sm font-medium">
-              <SparklesIcon className="w-4 h-4 mr-2" />
-              Automatización IA de Próxima Generación
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#F57F11]/10 border border-[#F57F11]/20 text-[#F57F11] text-sm font-medium">
+              IA revolution is coming...
             </div>
           </motion.div>
 
           {/* Main headline */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold leading-tight">
-              <span className="text-white">Transformamos tu</span>
-              <br />
-              <span className="text-gold-gradient">Negocio con IA</span>
+              <span className="text-white">Convirtiendo tareas repetitivas en </span>
+              <span className="text-[#F57F11]">resultados automáticos</span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Automatizamos tus procesos más críticos con{' '}
-              <span className="text-gold-400 font-semibold">Lead Generation Agents</span>,{' '}
-              <span className="text-gold-400 font-semibold">AI Systems</span> y{' '}
-              <span className="text-gold-400 font-semibold">N8N Workflows</span>{' '}
-              que generan resultados 24/7
+              Más que un chatbot. Automatiza conversaciones, entiende a tus clientes y crece tu negocio
             </p>
           </motion.div>
 
@@ -117,15 +76,15 @@ export function Hero() {
           <motion.div variants={itemVariants}>
             <div className="flex flex-wrap justify-center gap-8 text-sm sm:text-base">
               <div className="flex items-center text-gray-300">
-                <div className="w-2 h-2 bg-gold-500 rounded-full mr-3" />
+                <div className="w-2 h-2 bg-[#F57F11] rounded-full mr-3" />
                 ROI Escalable
               </div>
               <div className="flex items-center text-gray-300">
-                <div className="w-2 h-2 bg-gold-500 rounded-full mr-3" />
+                <div className="w-2 h-2 bg-[#F57F11] rounded-full mr-3" />
                 Automatización 24/7
               </div>
               <div className="flex items-center text-gray-300">
-                <div className="w-2 h-2 bg-gold-500 rounded-full mr-3" />
+                <div className="w-2 h-2 bg-[#F57F11] rounded-full mr-3" />
                 Implementación en 14 días
               </div>
             </div>
@@ -139,7 +98,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Consulta Estratégica
+              Empieza hoy
               <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform inline" />
             </motion.button>
             
@@ -153,19 +112,6 @@ export function Hero() {
             </motion.button>
           </motion.div>
 
-          {/* Trust indicators */}
-          <motion.div variants={itemVariants} className="pt-8">
-            <p className="text-gray-400 text-sm mb-4">
-              Tecnología de vanguardia para empresas ambiciosas
-            </p>
-            <div className="flex justify-center items-center gap-8 opacity-60">
-              <div className="text-gold-400 font-semibold">AI Infrastructure</div>
-              <div className="w-1 h-1 bg-gold-500 rounded-full" />
-              <div className="text-gold-400 font-semibold">Dashboards Personalizados</div>
-              <div className="w-1 h-1 bg-gold-500 rounded-full" />
-              <div className="text-gold-400 font-semibold">Soporte Premium</div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
 
@@ -181,9 +127,9 @@ export function Hero() {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-gold-500/50 rounded-full flex justify-center"
+            className="w-6 h-10 border-2 border-[#F57F11]/50 rounded-full flex justify-center"
           >
-            <div className="w-1 h-3 bg-gold-500 rounded-full mt-2" />
+            <div className="w-1 h-3 bg-[#F57F11] rounded-full mt-2" />
           </motion.div>
         </div>
       </motion.div>

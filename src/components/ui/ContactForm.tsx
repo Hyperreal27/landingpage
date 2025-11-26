@@ -91,54 +91,44 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Send data to N8n webhook
-      const response = await fetch('https://zzn8n.danielcarreon.site/webhook-test/form', {
+      // Create FormData for FormSubmit.co
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('company', formData.company);
+      formDataToSend.append('budget', formData.revenue);
+      formDataToSend.append('website', formData.website);
+      formDataToSend.append('message', formData.message);
+      
+      // Hidden fields for FormSubmit.co
+      formDataToSend.append('_subject', 'Nueva consulta desde Intellia.mx');
+      formDataToSend.append('_captcha', 'false');
+      formDataToSend.append('_template', 'box');
+      formDataToSend.append('_next', '/gracias');
+
+      // Send data to FormSubmit.co
+      const response = await fetch('https://formsubmit.co/intellia@intellia.mx', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          // Form data matching N8N expectations
-          name: formData.name,
-          email: formData.email,
-          phoneNumber: formData.phone,
-          company: formData.company,
-          budget: formData.revenue,
-          website: formData.website,
-          message: formData.message,
-          // Additional metadata for better tracking
-          timestamp: new Date().toISOString(),
-          source: 'landing_page_contact_form',
-          user_agent: navigator.userAgent,
-        }),
+        body: formDataToSend,
       });
 
-      // Check if webhook received the data successfully
+      // Check if form was submitted successfully
       if (response.ok) {
-        console.log('Form data sent successfully to N8n webhook');
+        console.log('Form data sent successfully to FormSubmit.co');
         setIsSubmitted(true);
         
-        // Reset form after 3 seconds
+        // Redirect to thank you page after showing success message
         setTimeout(() => {
-          setIsSubmitted(false);
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            company: '',
-            revenue: '',
-            website: '',
-            message: '',
-          });
-        }, 3000);
+          window.location.href = '/gracias';
+        }, 2000);
       } else {
-        throw new Error(`Webhook error: ${response.status} ${response.statusText}`);
+        throw new Error(`FormSubmit error: ${response.status} ${response.statusText}`);
       }
       
     } catch (error) {
-      console.error('Error sending form data to webhook:', error);
-      // You could add error state handling here if needed
-      // For now, we'll still show success to avoid breaking user experience
+      console.error('Error sending form data to FormSubmit.co:', error);
+      // Show success message even on error to avoid breaking user experience
       setIsSubmitted(true);
       
       setTimeout(() => {
@@ -184,8 +174,16 @@ export function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             onSubmit={handleSubmit}
+            action="https://formsubmit.co/intellia@intellia.mx"
+            method="POST"
             className="space-y-6"
           >
+            {/* Hidden fields for FormSubmit.co */}
+            <input type="hidden" name="_subject" value="Nueva consulta desde Intellia.mx" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+            <input type="hidden" name="_next" value="/gracias" />
+            
             {/* Personal Information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -200,7 +198,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   className={`w-full bg-dark-800/50 border ${
                     errors.name ? 'border-red-500' : 'border-gray-600'
-                  } rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-gold-500 transition-colors`}
+                  } rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#F57F11] transition-colors`}
                   placeholder="Tu nombre completo"
                 />
                 {errors.name && (
@@ -227,7 +225,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   className={`w-full bg-dark-800/50 border ${
                     errors.email ? 'border-red-500' : 'border-gray-600'
-                  } rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-gold-500 transition-colors`}
+                  } rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#F57F11] transition-colors`}
                   placeholder="tu@empresa.com"
                 />
                 {errors.email && (
@@ -257,7 +255,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   className={`w-full bg-dark-800/50 border ${
                     errors.phone ? 'border-red-500' : 'border-gray-600'
-                  } rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-gold-500 transition-colors`}
+                  } rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#F57F11] transition-colors`}
                   placeholder="+52 55 1234 5678"
                 />
                 {errors.phone && (
@@ -284,7 +282,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   className={`w-full bg-dark-800/50 border ${
                     errors.company ? 'border-red-500' : 'border-gray-600'
-                  } rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-gold-500 transition-colors`}
+                  } rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#F57F11] transition-colors`}
                   placeholder="Nombre de tu empresa"
                 />
                 {errors.company && (
@@ -313,7 +311,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   className={`w-full bg-dark-800/50 border ${
                     errors.revenue ? 'border-red-500' : 'border-gray-600'
-                  } rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors`}
+                  } rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#F57F11] transition-colors`}
                 >
                   <option value="">Elige tu rango de inversión</option>
                   {budgetOptions.map(option => (
@@ -344,7 +342,7 @@ export function ContactForm() {
                   name="website"
                   value={formData.website}
                   onChange={handleChange}
-                  className="w-full bg-dark-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-gold-500 transition-colors"
+                  className="w-full bg-dark-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#F57F11] transition-colors"
                   placeholder="https://tuempresa.com o @usuario"
                 />
               </div>
@@ -361,7 +359,7 @@ export function ContactForm() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full bg-dark-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-gold-500 transition-colors resize-none"
+                className="w-full bg-dark-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#F57F11] transition-colors resize-none"
                 placeholder="Describe brevemente el principal desafío que quieres resolver con IA..."
               />
             </div>

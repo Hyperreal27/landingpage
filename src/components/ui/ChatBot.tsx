@@ -140,14 +140,14 @@ export function ChatBot() {
             }}
           >
             {/* Chat Header */}
-            <div className="bg-dark-900/90 border-b border-gold-500/20 p-4 flex items-center justify-between">
+            <div className="bg-dark-900/90 border-b border-orange-500/20 p-4 flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gold-gradient rounded-full flex items-center justify-center">
                   <span className="text-dark-950 font-bold text-sm">AI</span>
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">{config.branding.name}</h3>
-                  <p className="text-gold-400 text-xs">{config.branding.description}</p>
+                  <p className="text-orange-400 text-xs">{config.branding.description}</p>
                 </div>
               </div>
               <button
@@ -191,14 +191,14 @@ export function ChatBot() {
             </div>
 
             {/* Input Area */}
-            <div className="border-t border-gold-500/20 p-4">
+            <div className="border-t border-orange-500/20 p-4">
               <form onSubmit={handleSubmit} className="flex items-end space-x-2">
                 <textarea
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyDown={handleKeyPress}
                   placeholder={config.ui.placeholderText}
-                  className="flex-1 bg-dark-800 border border-gold-500/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-gold-500/40 focus:ring-1 focus:ring-gold-500/20 transition-all resize-none min-h-[48px] max-h-32 overflow-y-auto"
+                  className="flex-1 bg-dark-800 border border-orange-500/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-orange-500/40 focus:ring-1 focus:ring-orange-500/20 transition-all resize-none min-h-[48px] max-h-32 overflow-y-auto"
                   rows={1}
                   disabled={isLoading}
                   style={{

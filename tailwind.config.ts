@@ -11,19 +11,33 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        // Custom AI Agency Gold & Black Palette
+        // Custom AI Agency Orange & Black Palette
+        orange: {
+          50: '#fff4f0',
+          100: '#ffe0d6',
+          200: '#ffc1ad',
+          300: '#ff9779',
+          400: '#F57F11',
+          500: '#F57F11',
+          600: '#d66a0e',
+          700: '#b85a0c',
+          800: '#9a4a0a',
+          900: '#7c3a08',
+          950: '#4a1c0f',
+        },
+        // Keep gold for backward compatibility, but map to orange
         gold: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
-          950: '#451a03',
+          50: '#fff4f0',
+          100: '#ffe0d6',
+          200: '#ffc1ad',
+          300: '#ff9779',
+          400: '#F57F11',
+          500: '#F57F11',
+          600: '#d66a0e',
+          700: '#b85a0c',
+          800: '#9a4a0a',
+          900: '#7c3a08',
+          950: '#4a1c0f',
         },
         dark: {
           50: '#f9fafb',
@@ -39,9 +53,9 @@ const config: Config = {
           950: '#030712',
         },
         primary: {
-          DEFAULT: '#f59e0b', // Gold
-          dark: '#d97706',
-          light: '#fbbf24',
+          DEFAULT: '#F57F11', // Orange
+          dark: '#d66a0e',
+          light: '#ff9779',
         },
         secondary: {
           DEFAULT: '#111827', // Dark
@@ -51,8 +65,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        mono: ['Inter', 'monospace'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -109,9 +123,10 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gold-gradient': 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%)',
+        'gold-gradient': 'linear-gradient(135deg, #ff9779 0%, #F57F11 50%, #d66a0e 100%)',
+        'orange-gradient': 'linear-gradient(135deg, #ff9779 0%, #F57F11 50%, #d66a0e 100%)',
         'dark-gradient': 'linear-gradient(135deg, #111827 0%, #1f2937 50%, #374151 100%)',
-        'hero-gradient': 'linear-gradient(135deg, #030712 0%, #111827 25%, #1f2937 50%, #374151 75%, #f59e0b 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #000000 0%, #000000 25%, #000000 50%, #000000 75%, #000000 100%)',
       },
     },
   },

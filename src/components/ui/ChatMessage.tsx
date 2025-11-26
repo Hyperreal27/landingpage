@@ -41,14 +41,14 @@ export function ChatMessage({ message }: ChatMessageProps) {
       <div
         className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
           isUser
-            ? 'bg-gold-500 text-dark-950'
-            : 'bg-dark-700 border border-gold-500/20'
+            ? 'bg-orange-500 text-dark-950'
+            : 'bg-dark-700 border border-orange-500/20'
         }`}
       >
         {isUser ? (
           <UserIcon className="w-4 h-4" />
         ) : (
-          <SparklesIcon className="w-4 h-4 text-gold-400" />
+          <SparklesIcon className="w-4 h-4 text-orange-400" />
         )}
       </div>
 
@@ -57,7 +57,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
         className={`max-w-[280px] rounded-2xl px-4 py-3 relative ${
           isUser
             ? 'bg-gold-gradient text-dark-950 rounded-br-md'
-            : 'bg-dark-700 text-white border border-gold-500/10 rounded-bl-md'
+            : 'bg-dark-700 text-white border border-orange-500/10 rounded-bl-md'
         } ${isError ? 'border-red-500/50 bg-red-900/20' : ''} ${
           isSending ? 'opacity-70' : ''
         }`}
@@ -71,7 +71,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
         {isSending && (
           <div className="absolute -bottom-1 -right-1">
             <motion.div
-              className="w-2 h-2 bg-gold-400 rounded-full"
+              className="w-2 h-2 bg-orange-400 rounded-full"
               animate={{ scale: [1, 1.2, 1] }}
               transition={{
                 duration: 1,

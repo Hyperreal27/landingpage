@@ -38,7 +38,7 @@ export function CustomCursor() {
     <>
       {/* Main cursor dot */}
       <motion.div
-        className="fixed top-0 left-0 w-4 h-4 bg-gold-500 rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="fixed top-0 left-0 w-4 h-4 bg-[#F57F11] rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
           x: mousePosition.x - 8,
           y: mousePosition.y - 8,
@@ -53,7 +53,7 @@ export function CustomCursor() {
       
       {/* Trailing circle */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border border-gold-500/50 rounded-full pointer-events-none z-40"
+        className="fixed top-0 left-0 w-8 h-8 border border-[#F57F11]/50 rounded-full pointer-events-none z-40"
         animate={{
           x: mousePosition.x - 16,
           y: mousePosition.y - 16,
